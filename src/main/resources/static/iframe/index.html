@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home</title>
+	
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!--// Meta tag Keywords -->
+    
+	<!-- banner slider css -->
+	<link href="css/minimal-slider.css" rel='stylesheet' type='text/css' />
+	<!-- //banner slider css -->
+	
+	<!-- css files -->
+	<link rel="stylesheet" href="css/bootstrap.css"> <!-- Bootstrap-Core-CSS -->
+    <link href="css/style6.css" rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" /> <!-- Style-CSS -->
+	<link rel="stylesheet" href="css/fontawesome-all.css"> <!-- Font-Awesome-Icons-CSS -->
+	<!-- //css files -->
+	
+	<!--web font-->
+	<link href="http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+	<!--//web font-->
+
+</head>
+
+<body>
+
+
+
+
+<!-- Features -->
+<section class="features py-5">
+	<div class="container py-sm-5">
+		<div class="heading pb-4">
+			<h3 class="heading mb-2 text-center"> 我们的<span>业务 </span> </h3>
+			<p class="para mb-5 text-center">我们致力于多元化的经营和规范化的服务模式，让每项业务都有健康可持续发展的动力源泉。</p>
+		</div>
+		<div class="feature-grids row">
+			<div class="col-lg-4 col-md-6">
+				<div class="f1 p-sm-5 p-4">
+					<i class="fas fa-arrow-right" aria-hidden="true"></i>
+					<h3 class="my-3">楼宇弱电工程</h3>
+					<p>安全 保卫 通天下<br>
+						专注细节 规范施工 <br>
+						建设高质量工程<br>
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="f1 p-sm-5 p-4">
+					<i class="fas fa-arrow-right" aria-hidden="true"></i>
+					<h3 class="my-3">建筑装饰工程</h3>
+					<p>筑造精品工程<br>
+						装饰美化生活<br>
+						交给我们 以质取信
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 mt-lg-0 mt-sm-5 mt-4">
+				<div class="f1 p-sm-5 p-4">
+					<i class="fas fa-arrow-right" aria-hidden="true"></i>
+					<h3 class="my-3">家庭智能产品</h3>
+					<p>智能 科技 创新<br>
+						产品更全面 设计更合理<br>
+						您注重感受 我负责品质</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 mt-sm-5 mt-4">
+				<div class="f1 p-sm-5 p-4">
+					<i class="fas fa-arrow-right" aria-hidden="true"></i>
+					<h3 class="my-3">软件开发 平台运营</h3>
+					<p>智慧社区 让生活更美好<br>
+						最后1公里商圈运营<br>
+						软件定制设计、开发</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- //Features -->
+
+
+
+<!-- copyright -->
+
+<!-- //copyright -->
+
+	<!--model-forms-->
+    <!--/Login-->
+
+
+	<!-- js -->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap --> 
+	<!-- //js -->
+	
+	<!-- search overlay -->
+    <script src="js/modernizr-2.6.2.min.js"></script> 
+	<!-- //search overlay -->
+	
+	<!--search jQuery-->
+    <script src="js/classie-search.js"></script>
+    <script src="js/demo1-search.js"></script>
+    <!--//search jQuery-->
+
+    <!-- dropdown nav -->
+    <script>
+        $(document).ready(function() {
+            $(".dropdown").hover(
+                function() {
+                    $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+                    $(this).toggleClass('open');
+                },
+                function() {
+                    $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+                    $(this).toggleClass('open');
+                }
+            );
+        });
+    </script>
+    <!-- //dropdown nav -->
+
+	<!-- banner slider js -->
+	<script src="js/minimal-slider.js"></script>
+	<!-- //banner slider js -->
+
+	<!-- Stats-Number-Scroller-Animation-JavaScript -->
+	<script src="js/waypoints.min.js"></script> 
+	<script src="js/counterup.min.js"></script> 
+	<script>
+		jQuery(document).ready(function( $ ) {
+			$('.counter').counterUp({
+				delay: 100,
+				time: 1000
+			});
+		});
+	</script>
+	<!-- //Stats-Number-Scroller-Animation-JavaScript -->
+
+	<!-- start-smoth-scrolling -->
+	<script src="js/SmoothScroll.min.js"></script>
+	<script src="js/move-top.js"></script>
+	<script src="js/easing.js"></script>
+	<script>
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+	</script>
+	<!-- here stars scrolling icon -->
+	<script>
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+	<!-- //here ends scrolling icon -->
+	<!-- start-smoth-scrolling -->
+
+</body>
+</html>
