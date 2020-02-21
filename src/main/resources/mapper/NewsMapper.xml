@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lxzh.mapper.NewsMapper">
+
+    <resultMap id="BaseResultMap" type="new" >
+        <id column="id" property="id" jdbcType="VARCHAR" />
+        <result column="title" property="title" jdbcType="VARCHAR" />
+        <result column="time" property="time" jdbcType="VARCHAR" />
+        <result column="content" property="content" jdbcType="VARCHAR" />
+        <result column="desc_info" property="descInfo" jdbcType="LONGNVARCHAR" />
+
+    </resultMap>
+<!--新增新闻-->
+    <insert id="addNews" parameterType="new">
+        INSERT INTO `news_lxzh`(`id`, `title`, `time`,`content`,`type`,`desc_info`)
+         VALUES(#{id},#{title},#{time},#{content},#{type},#{descInfo} )
+    </insert>
+    <!--插入图片表-->
+    <insert id="insertImage" parameterType="imagebean" >
+        insert into image_lxzh (foreign_id, ori_img_name, new_img_name,
+            img_url, status, href
+            )
+        values (#{foreignId,jdbcType=VARCHAR}, #{oriImgName,jdbcType=VARCHAR}, #{newImgName,jdbcType=VARCHAR},
+            #{imgUrl,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{href,jdbcType=VARCHAR}
+            )
+    </insert>
+
+    <!--查询新闻列表-->
+    <select id="listNews" resultType="map">
+      select n.id ,n.title,n.time,n.type,n.desc_info descInfo,i.img_url imgUrl from news_lxzh n
+      left join image_lxzh i on n.id = i.foreign_id
+       where n.type=#{type}
+       order by n.time desc
+    </select>
+    <!--查询新闻详情-->
+    <select id="getNewDetail" resultType="com.lxzh.bean.New">
+      select * from news_lxzh where id=#{id}
+    </select>
+
+
+</mapper>

@@ -1027,4 +1027,14 @@ function fixSliderMaxHeight()
     $(".detailGlide .slider").css({"max-height":newHeight + "px"});
     //alert(newHeight);
 }
-$(window).load(function(){fixSliderMaxHeight();})
+$(window).load(function(){fixSliderMaxHeight();});
+function getUrl(url) {
+	return contextpath+url;
+}
+var contextpath="/lxzh/";
+function GetQueryString(name)
+{
+	var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+	var r = window.location.search.substr(1).match(reg);
+	if(r!=null)return  unescape(r[2]); return null;
+}

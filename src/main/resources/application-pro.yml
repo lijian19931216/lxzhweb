@@ -22,8 +22,8 @@ logging:
     com:
       lxzh:
         mapper : debug
-imagepath: /anbaotongweb/image/
-filepath: /anbaotongweb/file/
+imagepath: /lxzh/image/
+filepath: /lxzh/file/
 pageHelper:
   page: 1
   pageSize: 10

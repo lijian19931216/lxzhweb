@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="applicable-device" content="pc,mobile" />
+    <title>新闻中心</title>
+
+
+    <link rel="icon" href="../favicon.ico">
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/glide.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/online.css" rel="stylesheet" />
+    <link href="../layui/css/layui.css" rel="stylesheet" />
+    <script src="../layui/layui.js" type="text/javascript"></script>
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
+    <script src="../js/jquery.glide.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js" type="text/javascript"></script>
+    <script src="../js/respond.min.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div id="head">
+
+</div>
+<div class="container">
+    <div class="row" style="height: 600px;">
+
+        <div class="col-xs-12 col-sm-9 col-md-9" style="width: 100%">
+            <div class=" positionBox">
+                <div class="titleBar">
+                    <h1>当前位置</h1>
+                    <span></span>
+                    <a href="#">新闻资源</a> > <a href="#">公司新闻</a>
+                </div>
+                <div class="newsBox">
+                <ul class="indexNewsList">
+
+
+                </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    
+
+
+<div id="paging" style="text-align: center;"></div>
+
+
+
+    
+   <div id="foot"></div>
+    
+    <script type="text/javascript" src="../js/common.js"></script>
+
+    <script type="text/javascript">
+        $("#head").load("../common_head.html",function () {
+            // $("#first_li>a").css({"background": "#3477c8","color":"#fff"});
+        });
+        $("#foot").load("../common_foot.html");
+        $(function () {
+            showList(1,10);
+        });
+        function showList(currentPage,pageSize){
+            $.ajax({
+                url: getUrl("news/newsList"),
+                data: {type:1},
+                type: "POST",
+                dataType: "json",
+                success: function(data) {
+                    console.log(data);
+                    var html = "";
+                    var newsList = data.list;
+                    if(newsList){
+                        for(var i=0;i<newsList.length;i++){    //遍历data数组
+                            var ls = newsList[i];
+                            html+="<li class='col-xs-12 col-sm-6 col-md-6'>"+
+                                "<a href='com_newsdetail.html?id="+ls.id+"'>"+
+                                "<div class='img' style='background-image: url("+contextpath+ls.imgUrl+")'></div>"+
+                                "<div class='txt'>"+
+                                "<span class='title' style='font-size: 15px;font-weight: bold'>"+ls.title+"</span>"+
+                                "<span class='time'>[ "+ ls.time +"]</span>"+
+                                "<p>"+ls.descInfo+"</p>"+
+                                "</div></a></li>";
+                        }
+                        console.log(html);
+                        $(".indexNewsList").html(html); //在html页面id=test的标签里显示html内容
+
+                    }
+                    laypage(data);
+
+                },});
+
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>
