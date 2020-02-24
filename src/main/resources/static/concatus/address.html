@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="applicable-device" content="pc,mobile" />
-    <title>新闻详细页</title>
+    <title>办公地点</title>
 
 
     <link rel="icon" href="../favicon.ico">
@@ -40,7 +40,7 @@
                 <div class="titleBar">
                     <h1>当前位置</h1>
                     <span></span>
-                    <a>新闻中心</a> &gt;<a>公司新闻</a>
+                    <a>联系我们</a> &gt;<a>办公地点</a>
                 </div>
             </div>
 
@@ -49,9 +49,36 @@
 
 
                 <div id="content" class="detailContent">
+                    <div class="" style="float: left">
+                        <style type="text/css">
+                            #content p{
+                                font-size: 18px;
+                                color: black;
+                            }
+                        </style>
 
 
 
+                        <p style="white-space:normal;">
+                            <span style="line-height:1.5;">电话：13633405200</span>
+                        </p>
+                        <p style="white-space:normal;">
+                            邮箱：
+                        </p>
+                        <p style="white-space:normal;">
+                            网址：http://www.longxingzhihe.com
+                        </p>
+                        <p style="white-space:normal;">
+                            地址：长治市北环西街精英时代城2号楼D405,407室
+                        </p>
+
+
+                    </div>
+
+
+
+
+                    <iframe style="float: right;" width="604" height="525" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://j.map.baidu.com/s/RoWIFb"></iframe>
                 </div>
 
             </div>
@@ -68,24 +95,8 @@
 <script type="text/javascript" src="../js/common.js"></script>
 
 <script type="text/javascript">
-    $(function () {
-        $.ajax({
-            url: getUrl("news/newsDetail"),
-            data: {id:GetQueryString("id")},
-            type: "POST",
-            dataType: "json",
-            success: function(data) {
-                console.log(data);
-                if(data){
 
-                    $("#content").html(data.content); //在html页面id=test的标签里显示html内容
-                }
-
-
-            },});
-
-    })
-    $("#head").load("../common_head.html",function () {
+    $("#head").load("../common_noimg_head.html",function () {
 
     });
     $("#foot").load("../common_foot.html");

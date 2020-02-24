@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="applicable-device" content="pc,mobile" />
-    <title>关于我们</title>
+    <title>公司简介</title>
     
     
     
@@ -35,7 +35,7 @@
     <div class="container">
 
 
-            <div class="" style="height: 500px;" id="rightBox">
+            <div class="" style="height: 700px;" id="rightBox">
 
                 <div class="positionBox">
                     <div class="titleBar">
@@ -45,10 +45,22 @@
                     </div>
                 </div>
 
-                <div class="col-sm-12 col-md-12 pad">
-                    
-                    <div class="detailContent" style="line-height:1.8em;font-size: 20px;letter-spacing: normal">
-                        <img src="logo.jpg">
+                <div class="col-sm-12 col-md-12 pad" >
+                   <div style="width:30%;height: 500px;float: left">
+                       <img style="width: 100%;height: 100%" src="../images/chengfpl.jpg">
+                   </div>
+                    <div class="detailContent" >
+                        <!--<img src="../images/chengfpl.jpg" style="height: 300px;">-->
+                        <style type="text/css">
+                            .detailContent{
+                                float:right;
+                                width:65%;line-height:1.8em;
+                                font-size: 18px;letter-spacing: 1px;
+                            }
+                            .detailContent p{
+                                text-indent: 2em;
+                            }
+                        </style>
                         <p>龙兴智合创立于2013年，是一家以弱电工程、智能科技为核心的解决方案和服务提供商。
                         </p>
 
@@ -83,7 +95,7 @@
 
 
 <script>
-    $("#head").load("../common_head.html",function () {
+    $("#head").load("../common_noimg_head.html",function () {
         // $("#first_li>a").css({"background": "#3477c8","color":"#fff"});
     });
     $("#foot").load("../common_foot.html");
