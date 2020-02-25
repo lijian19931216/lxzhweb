@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="applicable-device" content="pc,mobile" />
+    <title>诚聘英才</title>
+
+
+    <link rel="icon" href="../favicon.ico">
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/glide.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/online.css" rel="stylesheet" />
+    <link href="../layui/css/layui.css" rel="stylesheet" />
+    <script src="../layui/layui.js" type="text/javascript"></script>
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
+    <script src="../js/jquery.glide.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js" type="text/javascript"></script>
+    <script src="../js/respond.min.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div id="head">
+
+</div>
+<div class="container">
+    <div class="row" style="height: 600px;">
+
+        <div class="col-xs-12 col-sm-9 col-md-9" style="width: 100%">
+            <div class=" positionBox">
+                <div class="titleBar">
+                    <h1>当前位置</h1>
+                    <span></span>
+                    <a href="#">加入我们</a> > <a href="#">诚聘英才</a>
+                </div>
+                <div style="text-align: center">
+                    <img  src="image/1.gif">
+                </div>
+
+                <h3 style="padding: 10px;text-align: center">员工是我们最宝贵的财富</h3>
+                <p style="padding-bottom: 10px;">我们致力营造开放透明的工作环境，让团队的每一名成员都有机会发挥潜能，也确保每个人的意见都获得尊重。
+                </p>
+                <p style="padding-bottom: 10px;">
+                    龙兴智合是以弱电工程、智能科技为核心的解决方案和服务提供商。为客户提供安防、系统集成、软件开发、智能产品推广和装饰装修等服务。
+                </p>
+
+                <p style="padding-bottom: 10px;">
+                    发挥你的无限可能，与龙兴智合共同成长！
+                </p>
+                <p style="padding-bottom: 10px;color: red   ">
+                    应聘时请携带： 身份证复印件｜个人简要履历 | 学历、学位证书原件｜技能等级证书原件｜职称证书原件；
+                </p>
+                <p style="padding-bottom: 10px;">
+                    总公司电话：（0355）6566636<br>
+                    联系地址：长治市北环西街精英时代城2号楼405室<br>
+                    官网地址：www.longxingzhihe.com<br>
+                    电子邮箱：longxingzhihe@163.com<br>
+                </p>
+                <img src="image/cpyc.png">
+
+                <div class="titleBar">
+                    <h1>最新职位</h1>
+                </div>
+                <div id="content" class="detailContent">
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    
+
+
+<div id="paging" style="text-align: center;"></div>
+
+
+
+    
+   <div id="foot"></div>
+    
+    <script type="text/javascript" src="../js/common.js"></script>
+
+    <script type="text/javascript">
+        $("#head").load("../common_noimg_head.html",function () {
+            // $("#first_li>a").css({"background": "#3477c8","color":"#fff"});
+        });
+        $("#foot").load("../common_foot.html");
+        $(function () {
+            $.ajax({
+                url: getUrl("busi/busiDetail"),
+                data: {type:21},
+                type: "POST",
+                dataType: "json",
+                success: function(data) {
+                    console.log(data);
+                    if(data){
+                        // $("#time").html(data.time); //在html页面id=test的标签里显示html内容
+                        $("#content").html(data.content); //在html页面id=test的标签里显示html内容
+                    }
+
+
+                },});
+
+        })
+
+
+
+
+    </script>
+
+</body>
+</html>

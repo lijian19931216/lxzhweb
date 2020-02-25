@@ -124,7 +124,7 @@ function laypage(result){
             , netx: '下一页'                 //下一页文本
             , first: '首页'                      //首页文本
             , last: '尾页'                    //尾页文本
-            ,theme:'#3477c8'
+            ,theme:'#595757'
             , layout: ['prev', 'page', 'next'/*,'limit','refresh','skip'*/]
             //跳转页码时调用
             , jump: function (obj, first) { //obj为当前页的属性和方法，第一次加载first为true

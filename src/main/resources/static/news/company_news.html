@@ -88,11 +88,11 @@
                             var ls = newsList[i];
                             html+="<li class='col-xs-12 col-sm-6 col-md-6'>"+
                                 "<a href='com_newsdetail.html?id="+ls.id+"'>"+
-                                "<div class='img' style='background-image: url("+contextpath+ls.imgUrl+")'></div>"+
-                                "<div class='txt'>"+
-                                "<span class='title' style='font-size: 15px;font-weight: bold'>"+ls.title+"</span>"+
+                                "<div class='img' style='background-image: url("+contextpath+ls.imgUrl+");width:30%;background-repeat:no-repeat; background-size:100% 100%;'></div>"+
+                                "<div style='margin-left: 200px;' class='txt'>"+
+                                "<span class='title' style='font-size: 16px;font-weight: bold'>"+ls.title+"</span>"+
                                 "<span class='time'>[ "+ ls.time +"]</span>"+
-                                "<p>"+ls.descInfo+"</p>"+
+                                "<p style='font-size: 14px;'>"+ls.descInfo+"</p>"+
                                 "</div></a></li>";
                         }
                         console.log(html);

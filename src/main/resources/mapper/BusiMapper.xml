@@ -16,9 +16,9 @@
 
     <!--插入案例表-->
     <insert id="addBusi" parameterType="busibean" >
-        insert into business_lxzh (title,content)
+        insert into business_lxzh (title,content,type)
         values ( #{title,jdbcType=VARCHAR},
-            #{content,jdbcType=LONGVARCHAR})
+            #{content,jdbcType=LONGVARCHAR},#{type})
     </insert>
 
 
